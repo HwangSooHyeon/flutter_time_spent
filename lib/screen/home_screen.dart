@@ -26,7 +26,6 @@ class HomeScreen extends StatelessWidget {
 class _DDay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     final textTheme = Theme.of(context).textTheme;
 
     return Column(
@@ -46,7 +45,13 @@ class _DDay extends StatelessWidget {
           style: textTheme.bodyMedium,
         ),
         const SizedBox(height: 16.0),
-        IconButton(iconSize: 60.0, onPressed: () {}, icon: Icon(Icons.favorite,),),
+        IconButton(
+          iconSize: 60.0,
+          onPressed: () {},
+          icon: Icon(
+            Icons.favorite,
+          ),
+        ),
         Text(
           'D+365',
           style: textTheme.headlineMedium,
@@ -59,10 +64,11 @@ class _DDay extends StatelessWidget {
 class _CoupleImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Image.asset(
-        'asset/img/middle_image.png',
-        height: MediaQuery.of(context).size.height / 2,
+    return Expanded(
+      child: Center(
+        child: Image.asset(
+          'asset/img/middle_image.png',
+        ),
       ),
     );
   }
